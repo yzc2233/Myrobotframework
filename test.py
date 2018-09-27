@@ -253,7 +253,7 @@ def image_to_string(img, cleanup, plus=''):
     return text
 aa = image_to_string()
 
-
+##ceshiyixia
 
 
 
