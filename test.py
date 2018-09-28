@@ -12,7 +12,7 @@ from rediscluster.client import StrictRedisCluster
 # from selenium import webdriver
 # from selenium.webdriver.common.action_chains import *
 import string
-
+import yaml
 reload(sys)
 
 sys.setdefaultencoding('utf8')
@@ -236,31 +236,85 @@ def correct_verify_code_format(s):
 # aa =  convert_base64_to_image("E:\SoftWare\JetBrains\PycharmProjects\\",r"ztLKx9fWt/u0rg==")
 # print(aa)
 
+#
+# def image_to_string(img, cleanup, plus=''):
+#     # cleanup为True则识别完成后删除生成的文本文件
+#     # plus参数为给tesseract的附加高级参数
+#     subprocess.check_output('tesseract ' + img + ' ' +
+#                             img + ' ' + plus, shell=True)  # 生成同名txt文件
+#     text = ''
+#     cleanup = cleanup.encode('utf-8')
+#     with open(img + '.txt', 'r') as f:
+#         text = f.read().strip()
+#         text = correct_verify_code_format(text)
+#     if cleanup == 'True':
+#         os.remove(img + '.txt')
+#         os.remove(img)
+#     print(text.path())
+#     return text
+# aa = image_to_string("aaa",False)
 
-def image_to_string(img, cleanup, plus=''):
-    # cleanup为True则识别完成后删除生成的文本文件
-    # plus参数为给tesseract的附加高级参数
-    subprocess.check_output('tesseract ' + img + ' ' +
-                            img + ' ' + plus, shell=True)  # 生成同名txt文件
-    text = ''
-    cleanup = cleanup.encode('utf-8')
-    with open(img + '.txt', 'r') as f:
-        text = f.read().strip()
-        text = correct_verify_code_format(text)
-    if cleanup == 'True':
-        os.remove(img + '.txt')
-        os.remove(img)
-    return text
-aa = image_to_string()
+#
+# def get_sms_code(mobile, env='qa2', mode='r'):
+#     # env值 qa2为test环境 stage为stage环境；mode值 r为注册手机号码获取验证码 f为找回密码获取验证码
+#     if env.lower() != 'qa2' and env.lower() != 'stage':
+#         return None
+#     if mode.lower() != 'r' and mode.lower() != 'f' and mode.lower() != 'm':
+#         return None
+#     if mode == 'r':
+#         sms_mode = 'SOA:MYACCOUNT:SMSCODE:1001:' + mobile
+#     elif mode == 'f':
+#         sms_mode = 'SOA:MYACCOUNT:SMSCODE:1002:' + mobile
+#     elif mode == 'm':
+#         sms_mode = 'SOA:MYACCOUNT:SMSCODE:1005:' + mobile
+#     if env.lower() == 'qa2':
+#         # Set redis db to QA2
+#         redis_db = [{'host': '10.157.26.84', 'port': 6379}, {'host': '10.157.26.85', 'port': 6379},
+#                     {'host': '10.157.26.86', 'port': 6379}, {'host': '10.157.26.87', 'port': 6379},
+#                     {'host': '10.157.26.88', 'port': 6379}]
+#     else:
+#         # Set redis db to Stage
+#         redis_db = [{'host': '10.157.24.45', 'port': 6379}, {'host': '10.157.24.46', 'port': 6379},
+#                     {'host': '10.157.24.47', 'port': 6379}, {'host': '10.157.24.54', 'port': 6379},
+#                     {'host': '10.157.24.55', 'port': 6379}]
+#     try:
+#         redisconn = StrictRedisCluster(startup_nodes=redis_db)
+#         print redisconn.mget(smscode)
+#         sms = redisconn.mget(sms_mode)
+#         if sms[0]:
+#             sms = filter(lambda ch: ch in '0123456789', sms[0])
+#             return sms
+#         else:
+#             print
+#             'can not find smscode'
+#             return 'can not find smscode'
+#     except Exception as e:
+#         print
+#         "Connect Redis node error:", e
+#
+#         # print get_Type(34)
+#         # print test_string('javascript:this.src='/_ui/desktop/theme-blue/images/nopic-178-242.jpg';')
+# aa = get_sms_code('18817943321',"stage","r")
+# print(aa)
 
-##ceshiyixia
+# def convert_yml_to_dict(filename):
+#     f = open(filename)
+#     y = yaml.load(f)
+#     return y
+#
+# aa = convert_yml_to_dict("E:\SoftWare\JetBrains\PycharmProjects\RobotFramework\yml.yml")
+# print(aa)
 
-#在试一下
 
-
-
-
-
+# def compare_sub_dicts(dict_mast, dict_sub):
+#     result = True
+#     for key in dict_sub:
+#         if dict_sub[key] != dict_mast[key]:
+#             result = False
+#     return result
+#
+# aa = compare_sub_dicts({"aa":1,"bb":"s","cc":33},{"aa":1,"bb":"s"})
+# print(aa)
 
 
 
