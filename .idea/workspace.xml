@@ -32,7 +32,7 @@
     <session id="-1446529174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.28" value="1" />
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="313" column="19" lean-forward="true" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+            <state relative-caret-position="267">
+              <caret line="289" column="43" lean-forward="true" selection-start-line="289" selection-start-column="43" selection-end-line="289" selection-end-column="43" />
               <folding>
                 <element signature="e#22#36#0" expanded="true" />
               </folding>
@@ -337,8 +337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="313" column="19" lean-forward="true" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+        <state relative-caret-position="267">
+          <caret line="289" column="43" lean-forward="true" selection-start-line="289" selection-start-column="43" selection-end-line="289" selection-end-column="43" />
           <folding>
             <element signature="e#22#36#0" expanded="true" />
           </folding>
