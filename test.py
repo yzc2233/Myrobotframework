@@ -306,6 +306,8 @@ sys.setdefaultencoding('utf8')
 # print(aa)
 
 
+
+
 def compare_sub_dicts(dict_mast, dict_sub):
     result = True
     for key in dict_sub:
@@ -313,7 +315,15 @@ def compare_sub_dicts(dict_mast, dict_sub):
             result = False
     return result
 
-
+# def compare_sub_dicts(dict_mast, dict_sub):
+#     result = True
+#     for key in dict_sub:
+#         if dict_sub[key] != dict_mast[key]:
+#             result = False
+#     return result
+#
+# aa = compare_sub_dicts({"aa":1,"bb":"s","cc":33},{"aa":1,"bb":"s"})
+# print(aa)
 def compare_sub_dicts2(dict_mast, dict_sub):
     print (dict_mast)
     dict_mast_str = str(dict_mast)
@@ -327,5 +337,10 @@ def compare_sub_dicts2(dict_mast, dict_sub):
             result = False
     print(result)
     return result
+
+
+
+
+#家用电脑提交一下
 
 
