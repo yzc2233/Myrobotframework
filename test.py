@@ -79,14 +79,14 @@ sys.setdefaultencoding('utf8')
 #
 # aa = remove_special_char("d@f#4$6%7*8+","+")
 # print(aa)
-
-def correct_verify_code_format(s):
-    arg1 = s.replace('><', 'X')
-    arg2 = arg1.replace(']', 'J')
-    arg3 = arg2.replace('$', 'S')
-    arg4 = arg3.replace('\/', 'V')
-    arg5 = arg4.replace('’', '')
-    return arg5.replace(' ', '')
+#
+# def correct_verify_code_format(s):
+#     arg1 = s.replace('><', 'X')
+#     arg2 = arg1.replace(']', 'J')
+#     arg3 = arg2.replace('$', 'S')
+#     arg4 = arg3.replace('\/', 'V')
+#     arg5 = arg4.replace('’', '')
+#     return arg5.replace(' ', '')
 
 # aa = correct_verify_code_format("aa><]$\/’w w w")
 # print(aa)
@@ -305,6 +305,13 @@ def correct_verify_code_format(s):
 # aa = convert_yml_to_dict("E:\SoftWare\JetBrains\PycharmProjects\RobotFramework\yml.yml")
 # print(aa)
 
+#
+# def compare_sub_dicts(dict_mast, dict_sub):
+#     result = True
+#     for key in dict_sub:
+#         if dict_sub[key] != dict_mast[key]:
+#             result = False
+#     return result
 
 # def compare_sub_dicts(dict_mast, dict_sub):
 #     result = True
@@ -315,7 +322,21 @@ def correct_verify_code_format(s):
 #
 # aa = compare_sub_dicts({"aa":1,"bb":"s","cc":33},{"aa":1,"bb":"s"})
 # print(aa)
-#家用电脑提交一下
+
+def compare_sub_dicts2(dict_mast, dict_sub):
+    print (dict_mast)
+    dict_mast_str = str(dict_mast)
+#    dict_mast_str = dict_mast_str.replace("null","None")
+#    dict_mast = eval(dict_mast_str)
+    print (dict_mast_str)
+    result = True
+    for key in dict_sub:
+        print(type(dict_sub[key]),dict_sub[key],type(dict_mast[key]),dict_mast[key])
+        if dict_sub[key] != dict_mast[key]:
+            result = False
+    print(result)
+    return result
+
 
 
 
